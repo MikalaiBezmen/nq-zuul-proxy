@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: proxy
+  cloud:
+    config:
+      uri: http://localhost:8081
+      label: configuration
+
+zuul:
+  ignoredServices: '*'
+  routes:
+      service: /service/**
